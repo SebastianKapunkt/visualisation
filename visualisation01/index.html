@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <style>
+    body {
+      margin: 0px;
+      padding: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="left_panel" width="400" height="400"></canvas>
+  <canvas id="right_panel" width="400" height="400"></canvas>
+  <script type="text/javascript" src="javascript/canvas_controller.js"></script>
+  <script>
+    var canvas = document.getElementById('left_panel');
+    var canvas2 = document.getElementById('right_panel');
+
+    draw_circle_in_canvas(
+      canvas.width / 2,
+      canvas.height / 2,
+      70,
+      canvas,
+      'red',
+      5,
+      true
+    );
+
+    draw_circle_in_canvas(
+      canvas.width / 2,
+      canvas.height / 2,
+      70,
+      canvas2,
+      'blue',
+      5,
+      true
+    );
+  </script>
+</body>
+
+</html>
