@@ -8,12 +8,16 @@
       padding: 0px;
     }
   </style>
+  <script type="text/javascript" src="javascript/jquery-min.js"></script>
+  <script type="text/javascript" src="javascript/canvas_controller.js"></script>
 </head>
 
 <body>
   <canvas id="left_panel" width="400" height="400"></canvas>
   <canvas id="right_panel" width="400" height="400"></canvas>
-  <script type="text/javascript" src="javascript/canvas_controller.js"></script>
+  <div>
+    <input type="range" id="number_slider" min="1" max="10" style="width: 508px">
+  </div>
   <script>
     var canvas = document.getElementById('left_panel');
     var canvas2 = document.getElementById('right_panel');
@@ -21,22 +25,25 @@
     draw_circle_in_canvas(
       canvas.width / 2,
       canvas.height / 2,
-      70,
+      1 * 10,
       canvas,
       'red',
       5,
       true
     );
 
-    draw_circle_in_canvas(
-      canvas.width / 2,
-      canvas.height / 2,
-      70,
-      canvas2,
-      'blue',
-      5,
-      true
-    );
+    slide_handling(function (number) {
+      clear_canvas(canvas2)
+      draw_circle_in_canvas(
+        canvas.width / 2,
+        canvas.height / 2,
+        number * 10,
+        canvas2,
+        'blue',
+        5,
+        true
+      );
+    })
   </script>
 </body>
 
