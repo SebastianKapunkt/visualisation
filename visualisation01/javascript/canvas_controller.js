@@ -17,11 +17,13 @@ function draw_circle_in_canvas(
   context.lineWidth = line_width;
   context.strokeStyle = color;
   context.stroke();
+  canvas.my_scale = radius/10;
 }
 
 function clear_canvas(canvas) {
   var context = canvas.getContext("2d");
   context.clearRect(0, 0, canvas.width, canvas.height);
+  canvas.my_scale = 0;
 }
 
 function slide_handling(callback) {
