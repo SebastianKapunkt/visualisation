@@ -13,8 +13,8 @@ function draw_circle_in_canvas(
   context.arc(center_x, center_y, radius, 0, 2 * Math.PI, false);
   if (is_filled) {
     context.fillStyle = color;
+    context.fill();
   }
-  context.fill();
   context.lineWidth = 1;
   context.strokeStyle = color;
   context.stroke();

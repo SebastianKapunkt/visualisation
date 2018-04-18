@@ -10,7 +10,7 @@ function get_first_task() {
     return tasks[0];
 }
 
-function get_next_tasks(){
+function get_next_task(){
     current_tasks++;
     if (current_tasks < tasks.length){
         return tasks[current_tasks];

@@ -33,7 +33,7 @@ body {
     padding: 16px;
 }
 
-.start_screen{
+.start_screen, .end_screen{
   position: absolute;
   width: 100%;
   height: 100%;
@@ -45,7 +45,11 @@ body {
   background: white;
 }
 
-.start_screen div{
+.end_screen{
+  display: none;
+}
+
+.start_screen div, .end_screen div{
   font-size: 1.5em;
   margin: 16px;
 }

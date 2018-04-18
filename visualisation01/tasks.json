@@ -1,8 +1,8 @@
 [
   {
+    "id": 0,
     "display_text": "This Question is about something",
     "reference_scale": 1,
-    "perceived_scale": 5,
     "type": "circle",
     "min_value": 1,
     "max_value": 8,
@@ -11,9 +11,9 @@
     "color": "orange"
   },
   {
+    "id": 1,
     "display_text": "This 2 Question is about something",
     "reference_scale": 4,
-    "perceived_scale": 1,
     "type": "circle",
     "min_value": 1,
     "max_value": 10,
