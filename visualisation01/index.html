@@ -4,22 +4,17 @@
 <head>
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <script type="text/javascript" src="javascript/jquery-min.js"></script>
-  <script type="text/javascript" src="javascript/canvas_controller.js"></script>
+  <script type="text/javascript" src="javascript/circle.js"></script>
+  <script type="text/javascript" src="javascript/square.js"></script>
   <script type="text/javascript" src="javascript/task_handler.js"></script>
   <script type="text/javascript" src="javascript/main.js"></script>
 </head>
 
 <body>
   <div class="start_screen">
-    <div class="button" onclick="start();">
-      Start
-    </div>
-    <div>Bla Bla beschreibung</div>
+    <div>We need a short moment to load the Tasks :)</div>
   </div>
   <div class="end_screen">
-    <div class="button" onclick="start();">
-      HERE YOU ARE
-    </div>
     <div>Bla Bla beschreibung</div>
   </div>
   <div class="main_container">
@@ -35,7 +30,11 @@
         <input type="range" id="number_slider" min="1" max="8" step="0.5" style="width: 508px">
         <div class="button" onclick="save_result();">Submit</div>
       </div>
+      <div class="show_value"></div>
     </div>
+  </div>
+  <div class="finish_and_skip button" onclick="finish_and_skip();">
+    X Finish and Skip remaining Tasks.
   </div>
 </body>
 
