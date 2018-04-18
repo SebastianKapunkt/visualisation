@@ -1,9 +1,24 @@
-{
-  "display_text": "This Question is about something",
-  "reference_scale": 1,
-  "perceived_scale": 5,
-  "type": "circle",
-  "steps": 0.5,
-  "is_filled": true,
-  "color": "orange"
-}
+[
+  {
+    "display_text": "This Question is about something",
+    "reference_scale": 1,
+    "perceived_scale": 5,
+    "type": "circle",
+    "min_value": 1,
+    "max_value": 8,
+    "step": 0.5,
+    "is_filled": true,
+    "color": "orange"
+  },
+  {
+    "display_text": "This 2 Question is about something",
+    "reference_scale": 4,
+    "perceived_scale": 1,
+    "type": "circle",
+    "min_value": 1,
+    "max_value": 10,
+    "step": 1,
+    "is_filled": false,
+    "color": "blue"
+  }
+]

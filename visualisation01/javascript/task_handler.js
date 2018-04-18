@@ -1,3 +1,21 @@
+var tasks = [];
+var current_tasks = 0;
+
 $.getJSON("tasks.json", function(json) {
-  console.log(json); // this will show the info it in firebug console
+    tasks = json;
 });
+
+function get_first_task() {
+    current_tasks = 0;
+    return tasks[0];
+}
+
+function get_next_tasks(){
+    current_tasks++;
+    if (current_tasks < tasks.length){
+        return tasks[current_tasks];
+    }else{
+        return null;
+    }
+    
+}
