@@ -30,8 +30,10 @@ function run_calculation() {
 
   // join the results back on the task
   var results = tasks.map(function(item) {
-    item.user_value = result_map.get(item.id);
-    return item;
+    if(result_map.get(item.id) != null){
+      item.user_value = result_map.get(item.id);
+      return item;
+    }
   });
 
   get_result_as_json(results);
