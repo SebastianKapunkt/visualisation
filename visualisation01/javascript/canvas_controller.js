@@ -17,7 +17,7 @@ function draw_circle_in_canvas(
   context.lineWidth = line_width;
   context.strokeStyle = color;
   context.stroke();
-  canvas.my_scale = radius/10;
+  canvas.my_scale = radius / 10;
 }
 
 function clear_canvas(canvas) {

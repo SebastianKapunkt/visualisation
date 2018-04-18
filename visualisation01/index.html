@@ -2,14 +2,9 @@
 <html>
 
 <head>
-  <style>
-    body {
-      margin: 0px;
-      padding: 0px;
-    }
-  </style>
   <script type="text/javascript" src="javascript/jquery-min.js"></script>
   <script type="text/javascript" src="javascript/canvas_controller.js"></script>
+  <script type="text/javascript" src="javascript/task_handler.js"></script>
 </head>
 
 <body>
@@ -19,7 +14,7 @@
     <input type="range" id="number_slider" min="1" max="8" step="0.5" style="width: 508px">
   </div>
   <div>
-      <input type="button" value="submit" onclick="print_result();">
+    <input type="button" value="submit" onclick="print_result();">
   </div>
   <script>
     var canvas = document.getElementById('left_panel');
@@ -48,7 +43,7 @@
       );
     });
 
-    function print_result(){
+    function print_result() {
       console.log(canvas2.my_scale)
     }
 

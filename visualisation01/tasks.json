@@ -1,0 +1,9 @@
+{
+  "display_text": "This Question is about something",
+  "reference_scale": 1,
+  "perceived_scale": 5,
+  "type": "circle",
+  "steps": 0.5,
+  "is_filled": true,
+  "color": "orange"
+}
