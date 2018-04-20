@@ -52,7 +52,7 @@ function clear_canvas(canvas) {
 
 function slide_handling(callback) {
   $("#number_slider").off();
-  $("#number_slider").on("input change", function() {
+  $("#number_slider").on("input change", function () {
     var current_slider_value = $(this).val();
     callback(current_slider_value);
   });

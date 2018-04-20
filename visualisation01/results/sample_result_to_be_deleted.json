@@ -1,1 +1,58 @@
-[{"id":0,"display_text":"This Question is about something","reference_scale":1,"perceiving_scale":null,"draw_type":"circle","answer_type":"change_draw","min_value":1,"max_value":8,"step":0.1,"is_filled":true,"color":"orange","user_value":"5"},{"id":1,"display_text":"This 2 Question is about something","reference_scale":2,"perceiving_scale":6,"draw_type":"circle","answer_type":"predict_number","min_value":1,"max_value":10,"step":0.5,"is_filled":false,"color":"blue","user_value":"3.5"},{"id":2,"display_text":"This Question is about something","reference_scale":1,"perceiving_scale":null,"draw_type":"square","answer_type":"change_draw","min_value":1,"max_value":8,"step":0.1,"is_filled":true,"color":"orange","user_value":"6.5"},{"id":3,"display_text":"This Question is about something","reference_scale":1,"perceiving_scale":8,"draw_type":"square","answer_type":"predict_number","min_value":1,"max_value":8,"step":0.1,"is_filled":true,"color":"orange","user_value":"2.5"}]
+[
+    {
+        "id": 0,
+        "display_text": "This Question is about something",
+        "reference_scale": 1,
+        "perceiving_scale": null,
+        "draw_type": "circle",
+        "answer_type": "change_draw",
+        "min_value": 1,
+        "max_value": 8,
+        "step": 0.1,
+        "is_filled": true,
+        "color": "orange",
+        "user_value": "5"
+    },
+    {
+        "id": 1,
+        "display_text": "This 2 Question is about something",
+        "reference_scale": 2,
+        "perceiving_scale": 6,
+        "draw_type": "circle",
+        "answer_type": "predict_number",
+        "min_value": 1,
+        "max_value": 10,
+        "step": 0.5,
+        "is_filled": false,
+        "color": "blue",
+        "user_value": "3.5"
+    },
+    {
+        "id": 2,
+        "display_text": "This Question is about something",
+        "reference_scale": 1,
+        "perceiving_scale": null,
+        "draw_type": "square",
+        "answer_type": "change_draw",
+        "min_value": 1,
+        "max_value": 8,
+        "step": 0.1,
+        "is_filled": true,
+        "color": "orange",
+        "user_value": "6.5"
+    },
+    {
+        "id": 3,
+        "display_text": "This Question is about something",
+        "reference_scale": 1,
+        "perceiving_scale": 8,
+        "draw_type": "square",
+        "answer_type": "predict_number",
+        "min_value": 1,
+        "max_value": 8,
+        "step": 0.1,
+        "is_filled": true,
+        "color": "orange",
+        "user_value": "2.5"
+    }
+]

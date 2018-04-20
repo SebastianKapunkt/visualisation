@@ -10,7 +10,7 @@ function prepare_for_circle(task, reference_canvas, perceiving_canvas) {
   switch (task.answer_type) {
     case "change_draw":
       hide_value();
-      slide_handling(function(number) {
+      slide_handling(function (number) {
         clear_canvas(perceiving_canvas);
         draw_circle_in_canvas(
           number,
@@ -29,7 +29,7 @@ function prepare_for_circle(task, reference_canvas, perceiving_canvas) {
       break;
     case "predict_number":
       reset_value();
-      slide_handling(function(number) {
+      slide_handling(function (number) {
         $(".show_value").html(number);
       });
       // right
