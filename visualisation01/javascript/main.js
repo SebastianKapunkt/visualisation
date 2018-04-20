@@ -15,6 +15,10 @@ function draw_task(task) {
   // set current task ID global
   task_id = task.id;
   task_answer_type = task.task_answer_type;
+
+  // set header text
+  var display_text_field = document.getElementById("display_text_field");
+  display_text_field.textContent = task.display_text;
   // set input slide intial value to reference scale
   $("#number_slider").val(task.reference_scale);
 
