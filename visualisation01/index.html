@@ -7,6 +7,7 @@
   <script type="text/javascript" src="javascript/circle.js"></script>
   <script type="text/javascript" src="javascript/square.js"></script>
   <script type="text/javascript" src="javascript/task_handler.js"></script>
+  <script type="text/javascript" src="javascript/result_handler.js"></script>
   <script type="text/javascript" src="javascript/main.js"></script>
 </head>
 
@@ -15,7 +16,21 @@
     <div>We need a short moment to load the Tasks :)</div>
   </div>
   <div class="end_screen">
-    <div>Bla Bla beschreibung</div>
+    <div>
+      <div class="content">
+        <div class="content_header">
+          <div class="display_text_field">Your results</div>
+        </div>
+        <div class="content_body">
+          <canvas id="keys" width="800" height="25"></canvas>
+          <canvas id="current_user_panel" width="400" height="400"></canvas>
+          <canvas id="average_user_panel" width="400" height="400"></canvas>
+        </div>
+        <div class="content_interaction">
+          <div class="restart button" onclick="start();">Restart</div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="main_container">
     <div class="content">
