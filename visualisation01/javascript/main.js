@@ -22,9 +22,9 @@ function draw_task(task) {
   display_text_field.textContent = task.display_text;
   // set input slide intial value to reference scale
   $("#number_slider").val(task.reference_scale);
-  $("#number_slider").prop('step', task.step);
-  $("#number_slider").prop('min', task.min_value);
-  $("#number_slider").prop('max', task.max_value);
+  $("#number_slider").prop('step', task.step); 
+  $("#number_slider").prop('min', task.min_value); 
+  $("#number_slider").prop('max', task.max_value); 
 
   clear_canvas(reference_canvas);
   clear_canvas(perceiving_canvas);

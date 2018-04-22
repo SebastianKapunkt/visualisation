@@ -43,14 +43,14 @@ function prepare_for_square(task, reference_canvas, perceiving_canvas) {
   }
 }
 
-function draw_square_in_canvas(size, canvas, color, is_filled) {
+function draw_square_in_canvas(scale, canvas, color, is_filled) {
   var context = canvas.getContext("2d");
 
-  center_x = (canvas.width / 2) - size * 7.5;
-  center_y = (canvas.height / 2) - size * 7.5;
+  center_x = (canvas.width / 2) - scale * 7.5;
+  center_y = (canvas.height / 2) - scale * 7.5;
 
   context.beginPath();
-  context.rect(center_x, center_y, size * 15, size * 15);
+  context.rect(center_x, center_y, Math.sqrt(scale) * 30, Math.sqrt(scale) * 30);
   if (is_filled) {
     context.fillStyle = color;
     context.fill();
