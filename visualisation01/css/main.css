@@ -21,6 +21,13 @@ body {
   justify-content: center;
 }
 
+.content_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+}
+
 .content_interaction {
   display: flex;
   justify-content: center;
