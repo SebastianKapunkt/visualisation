@@ -4,6 +4,7 @@ var result_map = new Map();
 
 function start() {
   $(".start_screen").css("display", "none");
+  $(".end_screen").css("display", "none");
   let task = get_first_task();
   draw_task(task);
 }
