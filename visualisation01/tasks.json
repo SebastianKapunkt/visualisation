@@ -1,7 +1,7 @@
 [
     {
         "id": 0,
-        "display_text": "Change the right circle (by using the slider) to the triple size (surface area) of the left circle.",
+        "display_text": "(1 / 7) Change the right circle (by using the slider) to the triple size (surface area) of the left circle.",
         "reference_scale": 2,
         "perceiving_scale": 6,
         "draw_type": "circle",
@@ -14,7 +14,7 @@
     },
     {
         "id": 1,
-        "display_text": "Now change the right circle to the half size of the left circle.",
+        "display_text": "(2 / 7) Now change the right circle to the half size of the left circle.",
         "reference_scale": 5,
         "perceiving_scale": 2.5,
         "draw_type": "circle",
@@ -27,7 +27,7 @@
     },
     {
         "id": 2,
-        "display_text": "This time change the right circle to be five times as large as the left circle.",
+        "display_text": "(3 / 7) This time change the right circle to be five times as large as the left circle.",
         "reference_scale": 1,
         "perceiving_scale": 5,
         "draw_type": "circle",
@@ -40,7 +40,7 @@
     },
     {
         "id": 3,
-        "display_text": "Ok, lets try the same with a square. Double the surface area of the left box.",
+        "display_text": "(4 / 7) Ok, lets try the same with a square. Double the surface area of the left box.",
         "reference_scale": 3,
         "perceiving_scale": 6,
         "draw_type": "square",
@@ -53,7 +53,7 @@
     },
     {
         "id": 4,
-        "display_text": "This time you should predict how much bigger the right circle is.",
+        "display_text": "(5 / 7) This time you should predict how much bigger the right circle is.",
         "reference_scale": 1,
         "perceiving_scale": 4,
         "draw_type": "circle",
@@ -66,7 +66,7 @@
     },
     {
         "id": 5,
-        "display_text": "Good! Could you say how much bigger the circle is this time?",
+        "display_text": "(6 / 7) Good! Could you say how much bigger the circle is this time?",
         "reference_scale": 3,
         "perceiving_scale": 4.5,
         "draw_type": "circle",
@@ -78,8 +78,8 @@
         "color": "blue"
     },
     {
-        "id": 5,
-        "display_text": "One more! How much smaller is the box?",
+        "id": 6,
+        "display_text": "(7 / 7) One more! How much smaller is the box?",
         "reference_scale": 4,
         "perceiving_scale": 2,
         "draw_type": "square",
