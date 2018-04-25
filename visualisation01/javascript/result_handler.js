@@ -56,13 +56,13 @@ function draw_results(results) {
         },
         data: [
             {
-                type: "stepLine",
+                type: "line",
                 showInLegend: true,
                 legendText: "Correct answer",
                 dataPoints: refDataPoints
             },
             {
-                type: "stepLine",
+                type: "line",
                 showInLegend: true,
                 legendText: "User results",
                 dataPoints: userResultDataPoints
@@ -76,7 +76,7 @@ function draw_results(results) {
         },
         data: [
             {
-                type: "stepLine",
+                type: "line",
                 showInLegend: true,
                 legendText: "User deviation",
                 dataPoints: deviationPoints

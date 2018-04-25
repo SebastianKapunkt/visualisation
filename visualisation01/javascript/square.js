@@ -46,8 +46,8 @@ function prepare_for_square(task, reference_canvas, perceiving_canvas) {
 function draw_square_in_canvas(scale, canvas, color, is_filled) {
   var context = canvas.getContext("2d");
 
-  center_x = (canvas.width / 2) - scale * 7.5;
-  center_y = (canvas.height / 2) - scale * 7.5;
+  center_x = (canvas.width / 2) - Math.sqrt(scale) * 45;
+  center_y = (canvas.height / 2) - Math.sqrt(scale) * 45;
 
   context.beginPath();
   context.rect(center_x, center_y, Math.sqrt(scale) * 30, Math.sqrt(scale) * 30);
