@@ -89,6 +89,7 @@ function handle_canvas_click(event) {
   $("#submit_click").click(function() {
     disable_submit_button();
     disable_repeat_button();
+    $("#question_text").text("");
     canvas.removeEventListener("click", handle_canvas_click);
     collect_data_and_save();
     main(task_instance);
