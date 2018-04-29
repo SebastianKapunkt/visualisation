@@ -9,7 +9,7 @@ class Question {
 
   next_run() {
       if(this.time < 4000){
-        this.time = this.time * 2;
+        this.time = this.time * 1.5;
       }
   }
 
