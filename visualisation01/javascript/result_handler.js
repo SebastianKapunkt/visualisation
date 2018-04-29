@@ -31,23 +31,25 @@ function draw_results(results) {
     deviationPoints = [results.length];
 
     for (i = 0; i < results.length; i++) {
-        // data
-        var reference_scale = results[i].reference_scale;
-        var perceiving_scale = results[i].perceiving_scale;
+        if(results[i] != null){
+            // data
+            var reference_scale = results[i].reference_scale;
+            var perceiving_scale = results[i].perceiving_scale;
 
-        var data = perceiving_scale / reference_scale;
-        refDataPoints[i] = { x: i + 1, y: data }
+            var data = perceiving_scale / reference_scale;
+            refDataPoints[i] = { x: i + 1, y: data }
 
-        // user result
-        var result = parseInt(results[i].user_value);
-        if (result == undefined || result == null) {
-            result = 0;
+            // user result
+            var result = parseFloat(results[i].user_value);
+            if (result == undefined || result == null) {
+                result = 0;
+            }
+            
+            userResultDataPoints[i] = { x: i + 1, y: result }
+
+            // deviation
+            deviationPoints[i] = { x: i + 1, y: Math.abs((data - result / reference_scale) / data * 100) }
         }
-        result = result / reference_scale;
-        userResultDataPoints[i] = { x: i + 1, y: result }
-
-        // deviation
-        deviationPoints[i] = { x: i + 1, y: Math.abs((data - result) / data * 100) }
     }
 
     var dataChart = new CanvasJS.Chart("dataChartContainer", {
