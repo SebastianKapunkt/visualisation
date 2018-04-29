@@ -4,13 +4,32 @@
 <head>
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <script type="text/javascript" src="javascript/jquery-min.js"></script>
-  
-  <!--Libs-->
-  <script type="text/javascript" src="javascript/canvasjs-2.1.1/canvasjs.min.js"></script>
+  <script type="text/javascript" src="javascript/question.js"></script>
+  <script type="text/javascript" src="javascript/result.js"></script>
+  <script type="text/javascript" src="javascript/task_handler.js"></script>
+  <script type="text/javascript" src="javascript/questflow.js"></script>
 </head>
 
 <body>
-  <canvas id="main_panel" width="800" height="400"></canvas>  
+  <div class="content">
+    <div class="question-title">
+      <div id="position_indicator"></div>
+      <div id="question_title">PLACEHOLDER</div>
+    </div>
+    <div class="canvas-content">
+      <div id="panel_cover">
+        Click here and the graphic will show for a short moment
+      </div>
+      <div id="main_panel">
+        <canvas id="main_canvas" width="800" height="400"></canvas>
+      </div>
+    </div>
+    <div id="question_text"></div>
+    <div class="bottom_bar">
+      <div id="repeat_click" class="button">redo with increased time</div>
+      <div id="submit_click" class="button">submit click position</div>
+    </div>
+  </div>
 </body>
 
 </html>
