@@ -12,6 +12,7 @@ function main(task) {
     var current_question = next_question(task.get_next_task());
     prepare_question(current_question);
   } else {
+    prepare_end_screen();
     // all tasks done do something
     console.log("DONE");
     console.log(result_map);
@@ -20,14 +21,38 @@ function main(task) {
 
 function skip_and_finish(){
   task_instance.set_current_to_last();
-  main(task_instance);
-  disable_canvas();
-  $("#panel_cover").css("display", "none");
-  $("#question_title").css("display", "none");
-  $("#position_indicator").css("display", "none");
-  $("#finish_button").css("display", "none");
+  main(task_instance); 
 }
 
+function prepare_end_screen(){
+  $("#restart").css("display","flex");
+  disable_canvas();
+  $("#panel_cover").css("display", "none");
+  $("#question_title").text("");
+  $("#position_indicator").text("");
+  $("#finish_button").css("display", "none");
+  disable_submit_button();
+  disable_repeat_button();
+  $("#question_text").text("");
+  $("#main_panel").css("display","none");
+}
+
+function initialize(){
+  canvas = null;
+  context = null;
+  task_instance = null;
+  questions = [];
+  cursor_x = 0;
+  cursor_y = 0;
+  result_map = new Map();
+  console.log("document ready!");
+  canvas = document.getElementById("main_canvas");
+  context = canvas.getContext("2d");
+  $("#restart").css("display","none");
+  $("#finish_button").css("display", "flex");
+  task_instance = new Task(main);
+  task_instance.init();
+}
 
 function prepare_question(question) {
   var title = "#question_title";
@@ -40,14 +65,6 @@ function prepare_question(question) {
     1 + question.id + "/" + task_instance.get_task_length()
   );
 }
-
-$(document).ready(function() {
-  console.log("document ready!");
-  canvas = document.getElementById("main_canvas");
-  context = canvas.getContext("2d");
-  task_instance = new Task(main);
-  task_instance.init();
-});
 
 function clear_canvas() {
   context.clearRect(0, 0, canvas.width, canvas.height);
@@ -135,3 +152,7 @@ function collect_data_and_save() {
   result_map.set(id, result);
   clear_canvas();
 }
+
+$(document).ready(function() {
+  initialize();
+});
