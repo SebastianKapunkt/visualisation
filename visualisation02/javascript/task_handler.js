@@ -31,4 +31,8 @@ class Task {
   get_task_length(){
     return this.tasks.length;
   }
+
+  set_current_to_last(){
+    this.current_task = this.tasks.length;
+  }
 }

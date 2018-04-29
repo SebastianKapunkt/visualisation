@@ -18,6 +18,17 @@ function main(task) {
   }
 }
 
+function skip_and_finish(){
+  task_instance.set_current_to_last();
+  main(task_instance);
+  disable_canvas();
+  $("#panel_cover").css("display", "none");
+  $("#question_title").css("display", "none");
+  $("#position_indicator").css("display", "none");
+  $("#finish_button").css("display", "none");
+}
+
+
 function prepare_question(question) {
   var title = "#question_title";
   var question_text = "#question_text";
@@ -63,6 +74,10 @@ function disable_repeat_button() {
   $("#repeat_click").off("click");
 }
 
+function disable_canvas(){
+  canvas.removeEventListener("click", handle_canvas_click);
+}
+
 function prepare_answer_click() {
   clear_canvas();
   get_current_question().set_question_text("#question_text");
@@ -90,7 +105,7 @@ function handle_canvas_click(event) {
     disable_submit_button();
     disable_repeat_button();
     $("#question_text").text("");
-    canvas.removeEventListener("click", handle_canvas_click);
+    disable_canvas();
     collect_data_and_save();
     main(task_instance);
   });

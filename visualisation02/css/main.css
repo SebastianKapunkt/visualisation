@@ -25,6 +25,11 @@ body {
   border: thin solid lightgray;
 }
 
+.canvas_content{
+  width: 800px;
+  height: 400px;
+}
+
 #panel_cover{
   background: lightgray;
 }
@@ -49,6 +54,7 @@ body {
 .question-title, .bottom_bar{
   display: flex;
   flex-flow: row;
+  justify-content: space-between;
 }
 
 .question-title div{
@@ -63,4 +69,9 @@ body {
 
 .bottom_bar{
   justify-content: space-between;
+}
+
+#finish_button{
+  font-size: 15px;
+  margin-right: 0px;
 }
