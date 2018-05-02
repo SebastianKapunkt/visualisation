@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "title_text": "look for the <b style='color:red'>RED</b> circle",
+    "title_text": "look for the <b style='color:red;'>RED</b> circle",
     "time": 250,
     "type": "case_find_red",
     "question_text": "click in the box where you think the <b style='color:red'>RED</b> circle was"

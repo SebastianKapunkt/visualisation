@@ -4,6 +4,8 @@ var task_instance = null;
 var questions = [];
 var cursor_x = 0;
 var cursor_y = 0;
+var target_x = 0;
+var target_y = 0;
 var result_map = new Map();
 
 function main(task) {
@@ -44,6 +46,8 @@ function initialize(){
   questions = [];
   cursor_x = 0;
   cursor_y = 0;
+  target_x = 0;
+  target_y = 0;
   result_map = new Map();
   console.log("document ready!");
   canvas = document.getElementById("main_canvas");
@@ -129,10 +133,12 @@ function handle_canvas_click(event) {
 }
 
 function set_canvas_interaction(time, draw_call) {
-  $("#panel_cover").click(function() {
+    $("#panel_cover").click(function() {
     $("#panel_cover").css("display", "none");
     $("#main_panel").css("display", "flex");
-    draw_call();
+    var what = draw_call();
+    target_x = what.x;
+    target_y = what.y;
     setTimeout(prepare_answer_click, time);
   });
 }
@@ -145,10 +151,15 @@ function collect_data_and_save() {
   var question = get_current_question();
   var id = question.id;
   var time = question.time;
-  var x = cursor_x;
-  var y = cursor_y;
 
-  var result = new Result(id, time, x, y);
+  var result = new Result(
+    id, 
+    time, 
+    cursor_x, 
+    cursor_y,
+    target_x, 
+    target_y
+  );
   result_map.set(id, result);
   clear_canvas();
 }

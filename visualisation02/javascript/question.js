@@ -14,7 +14,7 @@ class Question {
   }
 
   set_title_text(string_id) {
-    $(string_id).text(this.title);
+    $(string_id).html(this.title);
   }
 
   set_question_text(string_id) {
