@@ -2,50 +2,57 @@
   {
     "id": 0,
     "title_text": "look for the <b style='color:red;'>RED</b> circle",
-    "time": 250,
+    "time": 75,
     "type": "case_find_red",
-    "question_text": "click in the box where you think the <b style='color:red'>RED</b> circle was"
+    "question_text": "click in the box where you think the <b style='color:red'>RED</b> circle was",
+    "features":"shape,form,color"
   },
   {
     "id": 1,
     "title_text": "look for the <b style='color:red'>SMALL</b> circle",
-    "time": 250,
+    "time": 75,
     "type": "case_find_small",
-    "question_text": "click in the box where you think the <b style='color:red'>SMALL</b> circle was"
+    "question_text": "click in the box where you think the <b style='color:red'>SMALL</b> circle was",
+    "features":"shape,form,color"
   },
   {
     "id": 2,
     "title_text": "look for the <b style='color:red'>CIRCLE</b>",
-    "time": 250,
+    "time": 75,
     "type": "case_find_circle",
-    "question_text": "click in the box where you think the <b style='color:red'>CIRCLE</b> was"
+    "question_text": "click in the box where you think the <b style='color:red'>CIRCLE</b> was",
+    "features":"shape,form,color"
   },
   {
     "id": 3,
     "title_text": "look for the <b style='color:red'>SMALL RED</b> circle",
-    "time": 500,
+    "time": 75,
     "type": "case_find_small_red",
-    "question_text": "click in the box where you think the <b style='color:red'>SMALL RED</b> circle was"
+    "question_text": "click in the box where you think the <b style='color:red'>SMALL RED</b> circle was",
+    "features":"shape,form,color"
   },
   {
     "id": 4,
     "title_text": "look for the <b style='color:red'>SMALL CIRCLE</b>",
-    "time": 500,
+    "time": 75,
     "type": "case_find_small_circle",
-    "question_text": "click in the box where you think the <b style='color:red'>SMALL CIRCLE</b> was"
+    "question_text": "click in the box where you think the <b style='color:red'>SMALL CIRCLE</b> was",
+    "features":"shape,form,color"
   },
   {
     "id": 5,
     "title_text": "look for the <b style='color:red'>SMALL CIRCLE</b>",
-    "time": 500,
+    "time": 75,
     "type": "case_find_small_circle_1",
-    "question_text": "click in the box where you think the <b style='color:red'>SMALL CIRCLE</b> was"
+    "question_text": "click in the box where you think the <b style='color:red'>SMALL CIRCLE</b> was",
+    "features":"shape,form,color"
   },
   {
     "id": 6,
     "title_text": "look for the <b style='color:red'>RED CIRCLE</b>",
-    "time": 500,
+    "time": 75,
     "type": "case_find_red_circle",
-    "question_text": "click in the box where you think the <b style='color:red'>RED CIRCLE</b> was"
+    "question_text": "click in the box where you think the <b style='color:red'>RED CIRCLE</b> was",
+    "features":"shape,form,color"
   }
 ]

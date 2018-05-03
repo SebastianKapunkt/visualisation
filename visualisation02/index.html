@@ -4,10 +4,12 @@
 <head>
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <script type="text/javascript" src="javascript/jquery-min.js"></script>
+  <script type="text/javascript" src="javascript/canvas-js/canvasjs.min.js"></script>
   <script type="text/javascript" src="javascript/question.js"></script>
   <script type="text/javascript" src="javascript/result.js"></script>
   <script type="text/javascript" src="javascript/task_handler.js"></script>
   <script type="text/javascript" src="javascript/questflow.js"></script>
+  <script type="text/javascript" src="javascript/result_chart.js"></script>
   <script type="text/javascript" src="javascript/quest_drawer.js"></script>
 </head>
 
@@ -24,6 +26,9 @@
       </div>
       <div id="main_panel">
         <canvas id="main_canvas" width="800" height="400"></canvas>
+      </div>
+      <div id="result_panel">
+        <div id="chartContainer" style="height: 400px; width: 800px;"></div>
       </div>
     </div>
     <div id="question_text"></div>

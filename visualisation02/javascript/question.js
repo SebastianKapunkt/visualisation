@@ -1,10 +1,11 @@
 class Question {
-  constructor(id, title_text, time, draw_call, question_text) {
+  constructor(id, title_text, time, draw_call, question_text, features) {
     this.id = id;
     this.title = title_text;
     this.time = time;
     this.draw_call = draw_call;
     this.question = question_text;
+    this.features = features;
   }
 
   next_run() {
@@ -109,8 +110,10 @@ function next_question(task) {
     task.title_text,
     task.time,
     draw_function,
-    task.question_text
+    task.question_text,
+    task.features
   );
+  
   questions.push(current_question);
   return current_question;
 }
