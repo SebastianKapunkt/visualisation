@@ -5,7 +5,7 @@
     "time": 75,
     "type": "case_find_red",
     "question_text": "click in the box where you think the <b style='color:red'>RED</b> circle was",
-    "features":"shape,form,color"
+    "features":"RED & blue circles"
   },
   {
     "id": 1,
@@ -13,7 +13,7 @@
     "time": 75,
     "type": "case_find_small",
     "question_text": "click in the box where you think the <b style='color:red'>SMALL</b> circle was",
-    "features":"shape,form,color"
+    "features":"green SMALL & big circles"
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "time": 75,
     "type": "case_find_circle",
     "question_text": "click in the box where you think the <b style='color:red'>CIRCLE</b> was",
-    "features":"shape,form,color"
+    "features":"CIRCLE & boxes"
   },
   {
     "id": 3,
@@ -29,7 +29,7 @@
     "time": 75,
     "type": "case_find_small_red",
     "question_text": "click in the box where you think the <b style='color:red'>SMALL RED</b> circle was",
-    "features":"shape,form,color"
+    "features":"RED & blue, SMALL & big circles"
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "time": 75,
     "type": "case_find_small_circle",
     "question_text": "click in the box where you think the <b style='color:red'>SMALL CIRCLE</b> was",
-    "features":"shape,form,color"
+    "features":"green, SMALL & big boxes & CIRCLES"
   },
   {
     "id": 5,
@@ -45,7 +45,7 @@
     "time": 75,
     "type": "case_find_small_circle_1",
     "question_text": "click in the box where you think the <b style='color:red'>SMALL CIRCLE</b> was",
-    "features":"shape,form,color"
+    "features":"blue SMALL & big boxes, triangles & CIRLCES"
   },
   {
     "id": 6,
@@ -53,6 +53,6 @@
     "time": 75,
     "type": "case_find_red_circle",
     "question_text": "click in the box where you think the <b style='color:red'>RED CIRCLE</b> was",
-    "features":"shape,form,color"
+    "features":"RED & blue boxes & CIRCLES"
   }
 ]
