@@ -70,7 +70,7 @@ function next_question(task) {
         var distractor_features = [];
         distractor_features.push(new ObjectFeatures("square", "green", 1));
         distractor_features.push(new ObjectFeatures("square", "green", 0.5));
-        distractor_features.push(new ObjectFeatures("circle", "green", 0.5));
+        distractor_features.push(new ObjectFeatures("circle", "green", 1));
         return draw_featureObjects_in_grid(50, 10, null, distractor_features, new ObjectFeatures("circle", "green", 0.5));
       };
       break;

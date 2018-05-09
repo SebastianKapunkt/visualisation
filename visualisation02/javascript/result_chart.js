@@ -28,8 +28,7 @@ function bla(data_points) {
     axisY: {
       title: "perception time",
       gridColor: "lightgrey",
-      tickColor: "lightgrey",
-      interval: 50
+      tickColor: "lightgrey"
     },
     data: [
       {
