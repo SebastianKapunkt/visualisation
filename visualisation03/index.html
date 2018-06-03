@@ -3,47 +3,60 @@
 
 <head>
   <link rel="stylesheet" type="text/css" href="css/main.css">
-  
+
 </head>
 
 <body>
-    <div class="header">
-        <div id="origin-btn" onclick="activate_content('origin-content')">
-          By Origin
-        </div>
-        <div id="time-btn" onclick="activate_content('time-content')">
-          By Time
-        </div>
+  <div class="header">
+    <div id="origin-btn" onclick="activate_content('origin-content')">
+      By Origin
+    </div>
+    <div id="time-btn" onclick="activate_content('time-content')">
+      By Time
+    </div>
+  </div>
+  <div class="content">
+    <div id="attribute-selection">
+      <div id="selection">
+        <select id="value1_selection">
+          <option value="car">Car</option>
+          <option value="manufacturer">Manufacturer</option>
+          <option value="mpg">MPG</option>
+          <option value="cylinders">Cylinders</option>
+          <option value="displacement">Displacement</option>
+          <option value="horsepower">Horsepower</option>
+          <option value="weight">Weight</option>
+          <option value="acceleration">Acceleration</option>
+          <option value="model_year">Model Year</option>
+        </select>
+        <select id="value2_selection">
+          <option value="1">test1</option>
+          <option value="2">test2</option>
+          <option value="3">test3</option>
+        </select>
       </div>
-      <div class="content">
-        <div id="attribute-selection">
-          <div id="selection">
-            <select id="value1_selection">
-              <option value="car">Car</option>
-              <option value="manufacturer">Manufacturer</option>
-              <option value="mpg">MPG</option>
-              <option value="cylinders">Cylinders</option>
-              <option value="displacement">Displacement</option>
-              <option value="horsepower">Horsepower</option>
-              <option value="weight">Weight</option>
-              <option value="acceleration">Acceleration</option>
-              <option value="model_year">Model Year</option>
-            </select>
-            <select id="value2_selection">
-              <option value="1">test1</option>
-              <option value="2">test2</option>
-              <option value="3">test3</option>
-            </select>
-          </div>
-        </div>
-        <div id="origin-content">
-          <canvas id="main_canvas" width="100%" height="100%"></canvas>
-          Put in UI for origin visualisation
-        </div>
-        <div id="time-content">
-          Put in UI for tim visualisation
-        </div>
+    </div>
+    <div id="origin-content">
+      <canvas id="america_canvas" width="30%" ></canvas>
+      <div>
+        <img id="america_picture" src="data/AmericaBlackWhite.jpg" style="width:100%">
       </div>
+      <canvas id="europe_canvas" width="30%"></canvas>
+      <div>
+        <img id="europe_picture" src="data/EuropeBlackWhite.jpg" , style="width:100%">
+      </div>
+      <canvas id="japan_canvas" width="30%"></canvas>
+      <div>
+        <img id="japan_picture" src="data/JapanBlackWhite.jpg" , style="width:100%">
+      </div>
+
+      <!-- <canvas id="main_canvas" width="100%" height="100%"></canvas> -->
+      Put in UI for origin visualisation
+    </div>
+    <div id="time-content">
+      Put in UI for tim visualisation
+    </div>
+  </div>
 </body>
 
 <script type="text/javascript" src="javascript/world-data.js"></script>
