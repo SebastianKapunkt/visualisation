@@ -16,10 +16,10 @@ var canvas = document.getElementById("main_canvas");
         return f;
     });
     console.log(values);
-    min_x = values.reduce( (a,b) => a[0] < b[0] ? a : b)[0];
-    min_y = values.reduce( (a,b) => a[1] < b[1] ? a : b)[1];
-    max_x = values.reduce( (a,b) => a[0] > b[0] ? a : b)[0];
-    max_y = values.reduce( (a,b) => a[1] > b[1] ? a : b)[1];
+    min_x = values.reduce((a, b) => a[0] < b[0] ? a : b)[0];
+    min_y = values.reduce((a, b) => a[1] < b[1] ? a : b)[1];
+    max_x = values.reduce((a, b) => a[0] > b[0] ? a : b)[0];
+    max_y = values.reduce((a, b) => a[1] > b[1] ? a : b)[1];
     console.log(min_x);
     console.log(min_y);
     console.log();
@@ -34,7 +34,7 @@ var canvas = document.getElementById("main_canvas");
 
 })();
 
-function redraw(bla){
+function redraw(bla) {
     bla.map(f => {
         if (f[0][0].length == 2) {
             drawGeometry(f[0]);
@@ -65,6 +65,45 @@ function drawGeometry(coordinates) {
 
     context.stroke();
 }
+
+// function drawAmerica(size, color) {
+//     var canvas = document.getElementById("america_canvas");
+//     var context = canvas.getContext("2d");
+
+//     context.strokeStyle = color;
+
+//     context.beginPath();
+
+//     // TODO
+
+//     context.stroke();
+// }
+
+// function drawEurope(size, color) {
+//     var canvas = document.getElementById("europe_canvas");
+//     var context = canvas.getContext("2d");
+
+//     context.strokeStyle = color;
+
+//     context.beginPath();
+
+//     // TODO
+
+//     context.stroke();
+// }
+
+// function drawJapan(size, color) {
+//     var canvas = document.getElementById("japan_canvas");
+//     var context = canvas.getContext("2d");
+
+//     context.strokeStyle = color;
+
+//     context.beginPath();
+
+//     // TODO
+
+//     context.stroke();
+// }
 
 function resize() {
     let canvas = document.getElementById("main_canvas");

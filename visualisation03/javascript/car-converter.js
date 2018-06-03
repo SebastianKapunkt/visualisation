@@ -1,6 +1,11 @@
 let lines = car_data.split("\n");
 let cars = [];
-lines.map( l => {
+let numberCategories = ["MPG", "Cylinders", "Displacement", "Horsepower", "Weight", "Acceleration", "Model Year"];
+let textCategories = ["Car", "Manufacturer", "Origin"]
+
+let american_cars = [], european_cars = [], japanese_cars = [];
+
+lines.map(l => {
     items = l.split("	");
     var object = {
         "Car": items[0],
@@ -15,6 +20,16 @@ lines.map( l => {
         "Origin": items[9]
     };
     cars.push(object);
+
+    switch (items[9]) {
+        case "American":
+            american_cars.push(object);
+        case "European":
+            european_cars.push(object);
+        case "Japanese":
+            japanese_cars.push(object);
+    }
 });
 
 console.log(cars);
+console.log(getAverageByOriginFor("Weight"));
