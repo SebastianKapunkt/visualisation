@@ -55,6 +55,7 @@ function initilize_select(){
         select.selectedIndex = 0;
         return select;
     });
+    on_select_changed(selections);
 }
 
 function fill_select(select_id) {
@@ -74,4 +75,6 @@ function fill_select(select_id) {
         select.selectedIndex = 0;
         return select;
     })
+
+    on_select_changed(selections);
 }

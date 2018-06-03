@@ -1,8 +1,6 @@
 let lines = car_data.split("\n");
 let cars = [];
 
-let american_cars = [], european_cars = [], japanese_cars = [];
-
 lines.map(l => {
     items = l.split("	");
     var object = {
@@ -21,5 +19,8 @@ lines.map(l => {
 });
 
 cars = cars.filter(car => car['Car'] &&  car['Car']!='Car');
+let american_cars = cars.filter(car => car['Origin'] === "American");
+let european_cars = cars.filter(car => car['Origin'] === "European");
+let japanese_cars = cars.filter(car => car['Origin'] === "Japanese");
 
 console.log(cars);
