@@ -22,5 +22,3 @@ cars = cars.filter(car => car['Car'] &&  car['Car']!='Car');
 let american_cars = cars.filter(car => car['Origin'] === "American");
 let european_cars = cars.filter(car => car['Origin'] === "European");
 let japanese_cars = cars.filter(car => car['Origin'] === "Japanese");
-
-console.log(cars);
