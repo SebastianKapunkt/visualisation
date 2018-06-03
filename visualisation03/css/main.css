@@ -9,7 +9,39 @@ body {
 }
 
 #main_canvas {
-    position: absolute;
     left: 0px;
     top: 0px;
+}
+
+.show-content {
+    display: flex;
+}
+
+.hide-content {
+    display: none;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    border-bottom: thin solid black;
+    background: white;
+}
+
+.header > div {
+    padding: 16px;
+}
+
+.header > div:hover {
+    cursor: pointer;
+}
+
+.highlight-button{
+    background: lightseagreen;
+    color: white;
+}
+
+.content > div {
+    width: 100%;
 }
