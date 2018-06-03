@@ -45,3 +45,9 @@ body {
 .content > div {
     width: 100%;
 }
+
+#attribute-selection{
+    background: white;
+    border-bottom: thin solid black;
+    padding: 16px;
+}
