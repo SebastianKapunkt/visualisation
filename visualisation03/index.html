@@ -17,24 +17,15 @@
   </div>
   <div class="content">
     <div id="attribute-selection">
-      <div id="selection">
-        <select id="value1_selection">
-          <option value="car">Car</option>
-          <option value="manufacturer">Manufacturer</option>
-          <option value="mpg">MPG</option>
-          <option value="cylinders">Cylinders</option>
-          <option value="displacement">Displacement</option>
-          <option value="horsepower">Horsepower</option>
-          <option value="weight">Weight</option>
-          <option value="acceleration">Acceleration</option>
-          <option value="model_year">Model Year</option>
-        </select>
-        <select id="value2_selection">
-          <option value="1">test1</option>
-          <option value="2">test2</option>
-          <option value="3">test3</option>
-        </select>
-      </div>
+          <div id="selection">
+            <label>Attribute 1</label>
+            <select id="attribute1-selection" onchange="fill_select('attribute1-selection')"></select>
+            </select>
+            <label>Attribute 2</label>
+            <select id="attribute2-selection" onchange="fill_select('attribute2-selection')">
+            </select>
+          </div>
+        </div>
     </div>
     <div id="origin-content">
       <canvas id="america_canvas" width="30%" ></canvas>
@@ -49,9 +40,6 @@
       <div>
         <img id="japan_picture" src="data/JapanBlackWhite.jpg" , style="width:100%">
       </div>
-
-      <!-- <canvas id="main_canvas" width="100%" height="100%"></canvas> -->
-      Put in UI for origin visualisation
     </div>
     <div id="time-content">
       Put in UI for tim visualisation
@@ -59,11 +47,10 @@
   </div>
 </body>
 
-<script type="text/javascript" src="javascript/world-data.js"></script>
 <script type="text/javascript" src="javascript/car-data.js"></script>
-<script type="text/javascript" src="javascript/main.js"></script>
-<script type="text/javascript" src="javascript/car-data-calculation.js"></script>
+<script type="text/javascript" src="javascript/utils.js"></script>
 <script type="text/javascript" src="javascript/car-converter.js"></script>
+<script type="text/javascript" src="javascript/car-data-calculation.js"></script>
 <script type="text/javascript" src="javascript/ui.js"></script>
 <script type="text/javascript" src="javascript/origin-content-ui.js"></script>
 <script type="text/javascript" src="javascript/time-content-ui.js"></script>

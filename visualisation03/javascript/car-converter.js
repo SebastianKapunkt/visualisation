@@ -1,7 +1,5 @@
 let lines = car_data.split("\n");
 let cars = [];
-let numberCategories = ["MPG", "Cylinders", "Displacement", "Horsepower", "Weight", "Acceleration", "Model Year"];
-let textCategories = ["Car", "Manufacturer", "Origin"]
 
 let american_cars = [], european_cars = [], japanese_cars = [];
 
@@ -20,16 +18,8 @@ lines.map(l => {
         "Origin": items[9]
     };
     cars.push(object);
-
-    switch (items[9]) {
-        case "American":
-            american_cars.push(object);
-        case "European":
-            european_cars.push(object);
-        case "Japanese":
-            japanese_cars.push(object);
-    }
 });
 
+cars = cars.filter(car => car['Car'] &&  car['Car']!='Car');
+
 console.log(cars);
-console.log(getAverageByOriginFor("Weight"));
