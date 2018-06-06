@@ -13,7 +13,10 @@ lines.map(l => {
         "Weight": items[6],
         "Acceleration": items[7],
         "Model Year": items[8],
-        "Origin": items[9]
+        "Origin": items[9],
+        "LKM": null,
+        "DisplacementInCCM": null,
+        "WeightInKG": null,
     };
     cars.push(object);
 });
@@ -22,3 +25,16 @@ cars = cars.filter(car => car['Car'] &&  car['Car']!='Car');
 let american_cars = cars.filter(car => car['Origin'] === "American");
 let european_cars = cars.filter(car => car['Origin'] === "European");
 let japanese_cars = cars.filter(car => car['Origin'] === "Japanese");
+
+
+cars.forEach(element => {
+    if (element.MPG != null && element.MPG != "NA") {
+        element.LKM = 235 / element.MPG;
+    }
+    if (element.Displacement != null && element.Displacement != "NA") {
+        element.DisplacementInCCM = element.Displacement * 16.387;
+    }
+    if (element.Weight != null && element.WeightInKG != "NA") {
+        element.WeightInKG = element.Weight * 0.4536;
+    }
+});

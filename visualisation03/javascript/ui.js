@@ -1,7 +1,7 @@
 let contents = [];
 let origin_selections = [];
 let time_selections = [];
-let numberCategories = ["MPG", "Cylinders", "Displacement", "Horsepower", "Weight", "Acceleration"];
+let numberCategories = ["LKM", "Cylinders", "DisplacementInCCM", "Horsepower", "WeightInKG", "Acceleration", "Model Year"];
 let textCategories = ["Car", "Manufacturer", "Origin"];
 
 (function () {
