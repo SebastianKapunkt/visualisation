@@ -45,20 +45,22 @@ function activate_content(id) {
         c['content'].classList.add("show-content");
         c['selects'].classList.add("show-content");
         c['button'].classList.add("highlight-button");
-        
-        if(id == "origin-content")    {
+
+        if (id == "origin-content") {
             // document.getElementById('origin-canvas').addEventListener("click", handle_canvas_click);            
-        }
-        else if (id == "time-content")    {
+        } else if (id == "time-content") {
             document.getElementById('time-canvas').addEventListener("click", handle_time_canvas_click);
         }
+
+        let parent = document.getElementById("data-table");
+        parent.innerHTML = "";
     });
 
 }
 
-function initilize_select(selects, callback){
+function initilize_select(selects, callback) {
     let left_categories = copy_array(numberCategories);
-    
+
     selects.map(select => {
         let current = left_categories[0];
         left_categories = left_categories.filter(c => c != current);
