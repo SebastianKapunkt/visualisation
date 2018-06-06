@@ -13,15 +13,13 @@ var fullColorHex = function (r, g, b) {
     return red + green + blue;
 };
 
-(function () {
-    var shapeData = [40, 100, 30, 23, 34, 45, 56, 67, 67, 67, 45];
-    var colorData = [0.8, 0.7, 0.6, 0.3, 0.4, 0.2, 0.45, 0.3, 0.4, 0.2, 0.7];
-    updateDateGraphic(shapeData, colorData);
-})();
-
 function updateDateGraphic(shapeData, colorData) {
     var canvas = document.getElementById('time-canvas');
     var context = canvas.getContext("2d");
+    context.clearRect(0, 0, canvas.width, canvas.height);
+
+    shapeData = normaleizeData(shapeData, 100);
+    colorData = normaleizeData(colorData, 0.8);
 
     var maxValue = 0;
     for (i = 0; i < shapeData.length; i++) {
@@ -31,12 +29,12 @@ function updateDateGraphic(shapeData, colorData) {
     }
 
     context.beginPath();
-    context.lineWidth = 5;
+    context.lineWidth = 2;
     context.strokeStyle = "black";
-    context.moveTo(80, 50);
-    context.lineTo(80, (maxValue) * 2 + 100);
-    context.lineTo(950, (maxValue) * 2 + 100);
-    context.stroke();
+    // context.moveTo(50, 50);
+    // context.lineTo(50, (maxValue) * 2 + 100);
+    // context.lineTo(950, (maxValue) * 2 + 100);
+    // context.stroke();
 
     var boxWidth = 800 / 13;
     for (i = 0; i < shapeData.length; i++) {

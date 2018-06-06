@@ -1,14 +1,3 @@
-// (function () {
-//     var sizeData = [40, 20, 30];
-//     var opacityData = [100, 50, 20];
-//     updateOriginImages(sizeData, opacityData);
-// })();
-
-function updateOriginImages(sizeData, opacityData) {
-    updateImageSize(sizeData);
-    updateImageOpacity(opacityData);
-}
-
 function updateImageSize(sizeData) {
     var america_picture = document.getElementById('america_picture');
     var europe_picture = document.getElementById('europe_picture');
@@ -56,6 +45,4 @@ function updateImageOpacity(opacityData) {
     america_picture.style.opacity = opacityData[0] * scale_factor;
     europe_picture.style.opacity = opacityData[1] * scale_factor;
     japan_picture.style.opacity = opacityData[2] * scale_factor;
-
-    console.log(america_picture.style.opacity + " " + europe_picture.style.opacity + " " + japan_picture.style.opacity);
 }

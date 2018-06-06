@@ -41,7 +41,7 @@ body {
     width: 100%;
 }
 
-#attribute-selection{
+.attribute-selection{
     background: white;
     border-bottom: thin solid black;
     padding: 16px;

@@ -9,20 +9,30 @@
 <body>
   <div class="header">
     <div id="origin-btn" onclick="activate_content('origin-content')">
-      By Origin
+      Compare by origin of car
     </div>
     <div id="time-btn" onclick="activate_content('time-content')">
-      By Time
+      Compare by model year of car
     </div>
   </div>
   <div class="content">
-    <div id="attribute-selection">
+    <div id="origin_selects" class="attribute-selection">
       <div id="selection">
         <label>GrayScale</label>
-        <select id="attribute1-selection" onchange="fill_select('attribute1-selection')"></select>
+        <select id="origin1-selection" onchange="fill_select('origin1-selection', origin_selections,on_origin_select_changed)"></select>
         </select>
         <label>Size</label>
-        <select id="attribute2-selection" onchange="fill_select('attribute2-selection')">
+        <select id="origin2-selection" onchange="fill_select('origin2-selection', origin_selections,on_origin_select_changed)">
+        </select>
+      </div>
+    </div>
+    <div id="time_selects" class="attribute-selection">
+      <div id="selection">
+        <label>GrayScale</label>
+        <select id="time1-selection" onchange="fill_select('time1-selection', time_selections, on_time_select_changed)"></select>
+        </select>
+        <label>Size</label>
+        <select id="time2-selection" onchange="fill_select('time2-selection', time_selections, on_time_select_changed)">
         </select>
       </div>
     </div>
@@ -42,7 +52,7 @@
     </div>
   </div>
   <div id="time-content">
-    <canvas id="time-canvas"  width="1000" height="1000"></canvas>
+    <canvas id="time-canvas" width="1000" height="1000"></canvas>
   </div>
   </div>
 </body>
