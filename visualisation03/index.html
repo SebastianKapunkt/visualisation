@@ -38,19 +38,24 @@
   <div id="origin-content">
     <canvas id="america_canvas" width="30%"></canvas>
     <div>
-      <img id="america_picture" src="data/AmericaBlackWhite.jpg" style="width:100%">
+      <img id="america_picture" src="data/AmericaBlackWhite.jpg" onclick="drawOriginTable('American')" style="width:100%">
     </div>
     <canvas id="europe_canvas" width="30%"></canvas>
     <div>
-      <img id="europe_picture" src="data/EuropeBlackWhite.jpg" , style="width:100%">
+      <img id="europe_picture" src="data/EuropeBlackWhite.jpg" onclick="drawOriginTable('European')" style="width:100%">
     </div>
     <canvas id="japan_canvas" width="30%"></canvas>
     <div>
-      <img id="japan_picture" src="data/JapanBlackWhite.jpg" , style="width:100%">
+      <img id="japan_picture" src="data/JapanBlackWhite.jpg" onclick="drawOriginTable('Japanese')" style="width:100%">
     </div>
   </div>
   <div id="time-content">
-    <canvas id="time-canvas" width="1000" height="1000"></canvas>
+    <canvas id="time-canvas" width="1000" height="300"></canvas>
+  </div>
+  <div class="scroll">
+    <table id="data-table">
+      
+    </table>
   </div>
 </body>
 

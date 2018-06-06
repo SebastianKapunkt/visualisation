@@ -18,7 +18,6 @@ function on_time_select_changed(selections){
 function update_for_origin_select(select, callback){
     let select_category = select.options[select.selectedIndex].value;
     let select_average = getAverageByTextCategorie(select_category, 'Origin');
-
     var data = [
         select_average.get('American'), //america
         select_average.get('European'), //europe

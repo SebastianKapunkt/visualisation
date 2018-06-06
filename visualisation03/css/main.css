@@ -4,7 +4,6 @@ body {
     height: 100%;
     margin: 0px;
     border: 0;
-    overflow: hidden;
     display: block;
 }
 
@@ -49,4 +48,9 @@ body {
 
 #america_picture, #europe_picture, #japan_picture{
     border-bottom: thin solid black;
+}
+
+#data-table{
+    width: 100%;
+    border: none;
 }
