@@ -45,7 +45,15 @@ function activate_content(id) {
         c['content'].classList.add("show-content");
         c['selects'].classList.add("show-content");
         c['button'].classList.add("highlight-button");
+        
+        if(id == "origin-content")    {
+            // document.getElementById('origin-canvas').addEventListener("click", handle_canvas_click);            
+        }
+        else if (id == "time-content")    {
+            document.getElementById('time-canvas').addEventListener("click", handle_time_canvas_click);
+        }
     });
+
 }
 
 function initilize_select(selects, callback){

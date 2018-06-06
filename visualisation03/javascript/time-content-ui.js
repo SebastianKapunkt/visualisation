@@ -1,3 +1,5 @@
+var contentBoxSizes = [];
+
 var rgbToHex = function (rgb) {
     var hex = Number(rgb).toString(16);
     if (hex.length < 2) {
@@ -36,15 +38,52 @@ function updateDateGraphic(shapeData, colorData) {
     // context.lineTo(950, (maxValue) * 2 + 100);
     // context.stroke();
 
+
+    var xPosition = 0;
+    var yPosition = 0;
     var boxWidth = 800 / 13;
+    var boxHeight = 0;
+
+    var currentBoxYPostion = 0;
     for (i = 0; i < shapeData.length; i++) {
+
+        xPosition = timeContentLeftMagine + currentBoxYPostion;
+        yPosition = (maxValue + 50) - shapeData[i];
+        boxHeight = shapeData[i] * 2;
+
         context.beginPath();
         var colorValue = parseInt(colorData[i] * 255);
         var color = fullColorHex(colorValue, colorValue, colorValue);
+
+        contentBoxSizes[i] = {x: xPosition, y: yPosition, w: boxWidth, h: boxHeight};
         // console.log(color);
         context.fillStyle = "#" + color.toString();
-        context.rect(100 + i * boxWidth, (maxValue + 50) - shapeData[i], boxWidth, shapeData[i] * 2);
+        context.rect(xPosition, yPosition, boxWidth, boxHeight);
         context.fill();
+
+        currentBoxYPostion += boxWidth;
+    }
+}
+
+let timeContentLeftMagine = 100;
+
+function handle_time_canvas_click(){
+    var canvas = document.getElementById('time-canvas');    
+    var rect = canvas.getBoundingClientRect();
+    cursor_x = event.clientX - rect.left;
+    cursor_y = event.clientY - rect.top;
+
+    var currentWidth = 0;
+    for(i = 0; i < contentBoxSizes.length; i++)
+    {
+        if(contentBoxSizes[i].x < cursor_x 
+            && contentBoxSizes[i].x + contentBoxSizes[i].w > cursor_x
+            && contentBoxSizes[i].y < cursor_y
+            && contentBoxSizes[i].y + contentBoxSizes[i].h > cursor_y ) {
+            // TODO Show cars of year i (0 = 72)
+            console.log(i);
+        }
+        currentWidth += contentBoxSizes[i].x;
     }
 }
 
