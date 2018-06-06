@@ -1,10 +1,28 @@
 function on_select_changed(selections) {
-    selections.map(select => {
-        let category = select.options[select.selectedIndex].value;
-        console.log("============" + category + "============");
-        console.log(getAverageByTextCategorie(category, 'Model Year'));
-        console.log(getAverageByTextCategorie(category, 'Origin'));
-    });
+    update_for_select(selections[0], updateImageOpacity);
+    update_for_select(selections[1], updateImageSize);
+
+    // selections.map(select => {
+    //     let category = select.options[select.selectedIndex].value;
+    //     console.log("============" + category + "============");
+    //     console.log(getAverageByTextCategorie(category, 'Model Year'));
+    //     console.log(getAverageByTextCategorie(category, 'Origin'));
+    // });
+}
+
+function update_for_select(select, callback){
+    let select_category = select.options[select.selectedIndex].value;
+    let select_average = getAverageByTextCategorie(select_category, 'Origin');
+
+    var data = [
+        select_average.get('American'), //america
+        select_average.get('European'), //europe
+        select_average.get('Japanese') //japan
+    ];
+    
+    console.log(data);
+
+    callback(data);
 }
 
 function getAverageByTextCategorie(category, damn) {

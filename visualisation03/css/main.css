@@ -8,11 +8,6 @@ body {
     display: block;
 }
 
-#main_canvas {
-    left: 0px;
-    top: 0px;
-}
-
 .show-content {
     display: flex;
 }
@@ -50,4 +45,8 @@ body {
     background: white;
     border-bottom: thin solid black;
     padding: 16px;
+}
+
+#america_picture, #europe_picture, #japan_picture{
+    border-bottom: thin solid black;
 }

@@ -1,8 +1,8 @@
-(function () {
-    var sizeData = [40, 100, 30];
-    var opacityData = [100, 50, 20];
-    updateOriginImages(sizeData, opacityData);
-})();
+// (function () {
+//     var sizeData = [40, 20, 30];
+//     var opacityData = [100, 50, 20];
+//     updateOriginImages(sizeData, opacityData);
+// })();
 
 function updateOriginImages(sizeData, opacityData) {
     updateImageSize(sizeData);
@@ -15,18 +15,17 @@ function updateImageSize(sizeData) {
     var japan_picture = document.getElementById('japan_picture');
 
     // find max size value
-    var maxValue = 0;
-    for (i = 0; i < sizeData.length; i++) {
-        if (sizeData[i] > maxValue) {
-            maxValue = sizeData[i];
-        }
-    }
+    var maxValue = sizeData.reduce(function(a, b) {
+        return Math.max(a, b);
+    });
 
-    var sizeOfAmerica = maxValue / 100 * sizeData[0]
+    var scale_factor = 100/maxValue;
+
+    var sizeOfAmerica = sizeData[0] * scale_factor;
     var margineSizeOfAmerica = (100 - sizeOfAmerica) / 2;
-    var sizeOfEurope = maxValue / 100 * sizeData[1]
+    var sizeOfEurope = sizeData[1] * scale_factor
     var margineSizeOfEurope = (100 - sizeOfEurope) / 2;
-    var sizeOfJapan = maxValue / 100 * sizeData[2]
+    var sizeOfJapan = sizeData[1] * scale_factor
     var margineSizeOfJapan = (100 - sizeOfJapan) / 2;
 
     // update img size
@@ -47,15 +46,16 @@ function updateImageOpacity(opacityData) {
     var japan_picture = document.getElementById('japan_picture');
 
     // find max opacity value
-    var maxValue = 0;
-    for (i = 0; i < opacityData.length; i++) {
-        if (opacityData[i] > maxValue) {
-            maxValue = opacityData[i];
-        }
-    }
+    var maxValue = opacityData.reduce(function(a, b) {
+        return Math.max(a, b);
+    });
+
+    var scale_factor = 1 / maxValue;
 
     // change img opacity
-    america_picture.style.opacity = maxValue / 100 * opacityData[0] / maxValue;
-    europe_picture.style.opacity = maxValue / 100 * opacityData[1] / maxValue;
-    japan_picture.style.opacity = maxValue / 100 * opacityData[2] / maxValue;
+    america_picture.style.opacity = opacityData[0] * scale_factor;
+    europe_picture.style.opacity = opacityData[1] * scale_factor;
+    japan_picture.style.opacity = opacityData[2] * scale_factor;
+
+    console.log(america_picture.style.opacity + " " + europe_picture.style.opacity + " " + japan_picture.style.opacity);
 }

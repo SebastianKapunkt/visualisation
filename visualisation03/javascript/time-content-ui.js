@@ -43,7 +43,7 @@ function updateDateGraphic(shapeData, colorData) {
         context.beginPath();
         var colorValue = parseInt(colorData[i] * 255);
         var color = fullColorHex(colorValue, colorValue, colorValue);
-        console.log(color);
+        // console.log(color);
         context.fillStyle = "#" + color.toString();
         context.rect(100 + i * boxWidth, (maxValue + 50) - shapeData[i], boxWidth, shapeData[i] * 2);
         context.fill();
