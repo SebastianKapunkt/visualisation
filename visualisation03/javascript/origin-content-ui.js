@@ -4,17 +4,15 @@ function updateImageSize(sizeData) {
     var japan_picture = document.getElementById('japan_picture');
 
     // find max size value
-    var maxValue = sizeData.reduce(function(a, b) {
-        return Math.max(a, b);
-    });
+    console.log(sizeData);
+    sizeData =  normaleizeData(sizeData, 100);
+    
 
-    var scale_factor = 100/maxValue;
-
-    var sizeOfAmerica = sizeData[0] * scale_factor;
+    var sizeOfAmerica = sizeData[0];
     var margineSizeOfAmerica = (100 - sizeOfAmerica) / 2;
-    var sizeOfEurope = sizeData[1] * scale_factor
+    var sizeOfEurope = sizeData[1];
     var margineSizeOfEurope = (100 - sizeOfEurope) / 2;
-    var sizeOfJapan = sizeData[1] * scale_factor
+    var sizeOfJapan = sizeData[2];
     var margineSizeOfJapan = (100 - sizeOfJapan) / 2;
 
     // update img size
@@ -34,15 +32,10 @@ function updateImageOpacity(opacityData) {
     var europe_picture = document.getElementById('europe_picture');
     var japan_picture = document.getElementById('japan_picture');
 
-    // find max opacity value
-    var maxValue = opacityData.reduce(function(a, b) {
-        return Math.max(a, b);
-    });
-
-    var scale_factor = 1 / maxValue;
-
+    opacityData = normaleizeData(opacityData, 0.9)
+    
     // change img opacity
-    america_picture.style.opacity = opacityData[0] * scale_factor;
-    europe_picture.style.opacity = opacityData[1] * scale_factor;
-    japan_picture.style.opacity = opacityData[2] * scale_factor;
+    america_picture.style.opacity = opacityData[0];
+    europe_picture.style.opacity = opacityData[1];
+    japan_picture.style.opacity = opacityData[2];
 }
