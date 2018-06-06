@@ -31,13 +31,13 @@ function drawDataTable(cars) {
     row.insertCell(-1).innerHTML = 'Car';
     row.insertCell(-1).innerHTML = 'Manufacturer';
     row.insertCell(-1).innerHTML = 'MPG';
+    row.insertCell(-1).innerHTML = 'LKM';
     row.insertCell(-1).innerHTML = 'Cylinders';
     row.insertCell(-1).innerHTML = 'Displacement';
-    row.insertCell(-1).innerHTML = 'Horsepower';
-    row.insertCell(-1).innerHTML = 'Weight';
-    row.insertCell(-1).innerHTML = 'Acceleration';
-    row.insertCell(-1).innerHTML = 'LKM';
     row.insertCell(-1).innerHTML = 'DisplacementInCCM';
+    row.insertCell(-1).innerHTML = 'Horsepower';
+    row.insertCell(-1).innerHTML = 'Acceleration';
+    row.insertCell(-1).innerHTML = 'Weight';
     row.insertCell(-1).innerHTML = 'WeightInKG';
 
     cars.map(car => {
@@ -47,14 +47,14 @@ function drawDataTable(cars) {
         row.insertCell(-1).innerHTML = car['Car'];
         row.insertCell(-1).innerHTML = car['Manufacturer'];
         row.insertCell(-1).innerHTML = car['MPG'];
+        row.insertCell(-1).innerHTML = car['LKM'] === null ? '' : car['WeightInKG'].toFixed(2);
         row.insertCell(-1).innerHTML = car['Cylinders'];
         row.insertCell(-1).innerHTML = car['Displacement'];
+        row.insertCell(-1).innerHTML = car['DisplacementInCCM'] === null ? '' : car['WeightInKG'].toFixed(2);
         row.insertCell(-1).innerHTML = car['Horsepower'];
-        row.insertCell(-1).innerHTML = car['Weight'];
         row.insertCell(-1).innerHTML = car['Acceleration'];
-        row.insertCell(-1).innerHTML = car['LKM'];
-        row.insertCell(-1).innerHTML = car['DisplacementInCCM'];
-        row.insertCell(-1).innerHTML = car['WeightInKG'];
+        row.insertCell(-1).innerHTML = car['Weight'];
+        row.insertCell(-1).innerHTML = car['WeightInKG'] === null ? '' : car['WeightInKG'].toFixed(2);
     });
 }
 
