@@ -66,3 +66,12 @@ function drawOriginTable(filter) {
         });
     drawDataTable(cars_copy);
 }
+
+function drawTimeTable(filter){
+    let cars_copy = copy_array(cars);
+    cars_copy = cars_copy.filter(
+        x => {
+            return x['Model Year'] == filter;
+        });
+    drawDataTable(cars_copy);
+}

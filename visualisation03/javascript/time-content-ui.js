@@ -82,6 +82,7 @@ function handle_time_canvas_click(){
             && contentBoxSizes[i].y + contentBoxSizes[i].h > cursor_y ) {
             // TODO Show cars of year i (0 = 72)
             console.log(i);
+            drawTimeTable(70 + i);
         }
         currentWidth += contentBoxSizes[i].x;
     }
