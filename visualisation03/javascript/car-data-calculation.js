@@ -4,9 +4,9 @@ function on_origin_select_changed(selections) {
 }
 
 function on_time_select_changed(selections){
-    let cat = selections[0].options[selections[0].selectedIndex].value
+    let cat = selections[1].options[selections[1].selectedIndex].value
     let ave = getAverageByTextCategorie(cat, 'Model Year');
-    let cat2 = selections[1].options[selections[1].selectedIndex].value
+    let cat2 = selections[0].options[selections[0].selectedIndex].value
     let ave2 = getAverageByTextCategorie(cat2, 'Model Year');
     let shapeData = [];
     let colorData = [];
