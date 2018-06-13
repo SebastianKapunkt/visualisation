@@ -7,33 +7,13 @@ body {
     display: block;
 }
 
-.show-content {
-    display: flex;
-}
-
-.hide-content {
-    display: none;
-}
-
 .header{
     width: 100%;
+    padding: 32px;
     display: flex;
     flex-flow: row;
     border-bottom: thin solid black;
-    background: white;
-}
-
-.header > div {
-    padding: 16px;
-}
-
-.header > div:hover {
-    cursor: pointer;
-}
-
-.highlight-button{
-    background: lightseagreen;
-    color: white;
+    background: lightsteelblue;
 }
 
 .content > div {
@@ -46,11 +26,7 @@ body {
     padding: 16px;
 }
 
-#america_picture, #europe_picture, #japan_picture{
-    border-bottom: thin solid black;
-}
-
-#data-table{
-    width: 100%;
-    border: none;
+.attribute-selection select{
+    width: 200px;
+    margin: 16px;
 }

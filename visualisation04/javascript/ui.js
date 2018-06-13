@@ -1,6 +1,6 @@
-let content_selections = [];
-let numberCategories = ["LKM", "Cylinders", "DisplacementInCCM", "Horsepower", "WeightInKG", "Acceleration", "Model Year"];
-let textCategories = ["Car", "Manufacturer", "Origin"];
+var selections = [];
+var loaded_categories = [];
+var current_cars = [];
 
 let what = [{
     "category": "A",
@@ -17,31 +17,21 @@ let what = [{
 ];
 
 (function () {
-    content_selections.push(document.getElementById('x-selection'));
-    content_selections.push(document.getElementById('y-selection'));
-    content_selections.push(document.getElementById('color-selection'));
-    content_selections.push(document.getElementById('form-selection'));
-
-    initilize_select(content_selections, on_select_changed);
-
-    drawBarChart(what);
-    what[0].amount=100
-    drawBarChart(what);
-    what[0].amount=150
-    drawBarChart(what);
-    what[0].amount=200
-    drawBarChart(what);
+    selections.push(document.getElementById('x-selection'));
+    selections.push(document.getElementById('y-selection'));
+    selections.push(document.getElementById('color-selection'));
+    selections.push(document.getElementById('form-selection'));
 })();
 
 function initilize_select(selects, callback) {
-    let left_categories = copy_array(numberCategories);
+    let left_categories = copy_array(loaded_categories);
 
     selects.map(select => {
         let current = left_categories[0];
         left_categories = left_categories.filter(c => c != current);
     });
 
-    let categories = copy_array(numberCategories);
+    let categories = copy_array(loaded_categories);
     selects.map(select => {
         select.innerHTML = '';
         let current = categories[0];
@@ -55,14 +45,14 @@ function initilize_select(selects, callback) {
 }
 
 function fill_select(select_id, selections, callback) {
-    let left_categories = copy_array(numberCategories);
+    let left_categories = copy_array(loaded_categories);
 
     selections.map(select => {
         let current = select.options[select.selectedIndex].value;
         left_categories = left_categories.filter(c => c != current);
     });
 
-    let categories = copy_array(numberCategories);
+    let categories = copy_array(loaded_categories);
     selections.map(select => {
         let selected = select.options[select.selectedIndex].value;
         select.innerHTML = '';

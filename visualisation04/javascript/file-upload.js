@@ -9,7 +9,6 @@
                 var reader = new FileReader();
 
                 reader.onload = function () {
-                    console.log(reader.result);
                     read_car_data_from_tab_seperated(reader.result);
                 };
 
@@ -26,15 +25,12 @@ function read_car_data_from_tab_seperated(car_string) {
     let cars = [];
 
     let columns = lines[0].split("	");
-
-    console.log(columns);
     lines.shift();
-
     lines.map(line => {
-        let car = new Map();
+        let car = new Object();
         let items = line.split("	");
         for (let i = 0; i < columns.length; i++) {
-            car.set(columns[i], items[i]);
+            car[columns[i]] = items[i];
         }
         cars.push(car);
     });
