@@ -21,6 +21,7 @@ function initilize_select(selects, callback) {
 
     let categories = copy_array(numberCategories);
     selects.map(select => {
+        select.innerHTML = '';
         let current = categories[0];
         create_option(select, current);
         categories = categories.filter(c => c != current);
