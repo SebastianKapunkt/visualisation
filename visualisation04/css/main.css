@@ -1,0 +1,56 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    border: 0;
+    display: block;
+}
+
+.show-content {
+    display: flex;
+}
+
+.hide-content {
+    display: none;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    border-bottom: thin solid black;
+    background: white;
+}
+
+.header > div {
+    padding: 16px;
+}
+
+.header > div:hover {
+    cursor: pointer;
+}
+
+.highlight-button{
+    background: lightseagreen;
+    color: white;
+}
+
+.content > div {
+    width: 100%;
+}
+
+.attribute-selection{
+    background: white;
+    border-bottom: thin solid black;
+    padding: 16px;
+}
+
+#america_picture, #europe_picture, #japan_picture{
+    border-bottom: thin solid black;
+}
+
+#data-table{
+    width: 100%;
+    border: none;
+}
