@@ -4,11 +4,28 @@
 <head>
   <link rel="stylesheet" type="text/css" href="css/main.css">
 
+  <script src="https://cdn.jsdelivr.net/npm/vega@4.0.0-rc.2"></script>
+
+  <script type="text/javascript">
+    var view;
+
+    vega.loader()
+      .load('javascript/plot-scema.json')
+      .then(function (plot_data) { render(JSON.parse(plot_data)); });
+
+    function render(spec) {
+      view = new vega.View(vega.parse(spec))
+        .renderer('canvas')  // set renderer (canvas or svg)
+        .initialize('#content-view') // initialize view within parent DOM container
+        .hover()             // enable hover encode set processing
+        .run();
+    }
+  </script>
 </head>
 
 <body>
   <div class="header">
-    <input id="file_upload" type="file"/>
+    <input id="file_upload" type="file" />
   </div>
   <div class="data-content">
     <div id="data-content_selects" class="attribute-selection">
@@ -29,14 +46,7 @@
     </div>
   </div>
   <div id="data-content">
-    <canvas id="data-canvas" width="1000" height="300"></canvas>
-  </div>
-  <div class="scroll">
-    <br>
-    <br>
-    <table id="data-table">
-      
-    </table>
+    <div id="content-view"></div>
   </div>
 </body>
 
@@ -45,5 +55,8 @@
 <script type="text/javascript" src="javascript/car-converter.js"></script>
 <script type="text/javascript" src="javascript/car-data-calculation.js"></script>
 <script type="text/javascript" src="javascript/ui.js"></script>
+
+<!--Plugins-->
+<script type="text/javascript" src="javascript/plugins/vega/vega-core.min.ja"></script>
 
 </html>
