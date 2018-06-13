@@ -1,32 +1,24 @@
 let contents = [];
-let origin_selections = [];
-let time_selections = [];
+let content_selections = [];
 let numberCategories = ["LKM", "Cylinders", "DisplacementInCCM", "Horsepower", "WeightInKG", "Acceleration", "Model Year"];
 let textCategories = ["Car", "Manufacturer", "Origin"];
 
 (function () {
     contents.push({
-        "id": "origin-content",
-        "content": document.getElementById("origin-content"),
-        "button": document.getElementById("origin-btn"),
-        "selects": document.getElementById("origin_selects")
-    });
-    contents.push({
-        "id": "time-content",
-        "content": document.getElementById("time-content"),
-        "button": document.getElementById("time-btn"),
-        "selects": document.getElementById("time_selects")
+        "id": "data-content",
+        "content": document.getElementById("data-content"),
+        "button": document.getElementById("data-btn"),
+        "selects": document.getElementById("data-content_selects")
     });
 
-    activate_content('time-content');
+    activate_content('data-content');
 
-    origin_selections.push(document.getElementById('origin1-selection'));
-    origin_selections.push(document.getElementById('origin2-selection'));
-    time_selections.push(document.getElementById('time1-selection'));
-    time_selections.push(document.getElementById('time2-selection'));
+    content_selections.push(document.getElementById('x-selection'));
+    content_selections.push(document.getElementById('y-selection'));
+    content_selections.push(document.getElementById('color-selection'));
+    content_selections.push(document.getElementById('form-selection'));
 
-    initilize_select(origin_selections, on_origin_select_changed);
-    initilize_select(time_selections, on_time_select_changed);
+    initilize_select(content_selections, on_select_changed);
 })();
 
 function activate_content(id) {
@@ -45,13 +37,7 @@ function activate_content(id) {
         c['content'].classList.add("show-content");
         c['selects'].classList.add("show-content");
         c['button'].classList.add("highlight-button");
-
-        if (id == "origin-content") {
-            // document.getElementById('origin-canvas').addEventListener("click", handle_canvas_click);            
-        } else if (id == "time-content") {
-            document.getElementById('time-canvas').addEventListener("click", handle_time_canvas_click);
-        }
-
+        
         let parent = document.getElementById("data-table");
         parent.innerHTML = "";
     });

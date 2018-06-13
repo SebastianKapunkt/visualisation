@@ -1,31 +1,19 @@
-function on_origin_select_changed(selections) {
-    update_for_origin_select(selections[0], updateImageOpacity);
-    update_for_origin_select(selections[1], updateImageSize);
+function on_select_changed(selections) {
+    // update_for_origin_select(selections[0], updateImageOpacity);
+    // update_for_origin_select(selections[1], updateImageSize);
 }
 
-function on_time_select_changed(selections){
-    let cat = selections[1].options[selections[1].selectedIndex].value
-    let ave = getAverageByTextCategorie(cat, 'Model Year');
-    let cat2 = selections[0].options[selections[0].selectedIndex].value
-    let ave2 = getAverageByTextCategorie(cat2, 'Model Year');
-    let shapeData = [];
-    let colorData = [];
-    Array.from(ave, ([key, value]) => shapeData.push(value));
-    Array.from(ave2, ([key, value]) => colorData.push(value));
-    updateDateGraphic(shapeData, colorData);
-}
-
-function update_for_origin_select(select, callback){
-    let select_category = select.options[select.selectedIndex].value;
-    let select_average = getAverageByTextCategorie(select_category, 'Origin');
-    var data = [
-        select_average.get('American'), //america
-        select_average.get('European'), //europe
-        select_average.get('Japanese') //japan
-    ];
-
-    callback(data);
-}
+// function on_select_changed(selections){
+//     let cat = selections[1].options[selections[1].selectedIndex].value
+//     let ave = getAverageByTextCategorie(cat, 'Model Year');
+//     let cat2 = selections[0].options[selections[0].selectedIndex].value
+//     let ave2 = getAverageByTextCategorie(cat2, 'Model Year');
+//     let shapeData = [];
+//     let colorData = [];
+//     Array.from(ave, ([key, value]) => shapeData.push(value));
+//     Array.from(ave2, ([key, value]) => colorData.push(value));
+//     updateDateGraphic(shapeData, colorData);
+// }
 
 function getAverageByTextCategorie(category, damn) {
     let time_car_map = [];

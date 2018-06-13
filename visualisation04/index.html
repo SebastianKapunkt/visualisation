@@ -8,51 +8,30 @@
 
 <body>
   <div class="header">
-    <div id="origin-btn" onclick="activate_content('origin-content')">
-      Compare by origin of car
-    </div>
-    <div id="time-btn" onclick="activate_content('time-content')">
-      Compare by model year of car
+    <div id="data-btn" onclick="activate_content('data-content')">
+      Load data
     </div>
   </div>
-  <div class="content">
-    <div id="origin_selects" class="attribute-selection">
+  <div class="data-content">
+    <div id="data-content_selects" class="attribute-selection">
       <div id="selection">
-        <label>GrayScale</label>
-        <select id="origin1-selection" onchange="fill_select('origin1-selection', origin_selections,on_origin_select_changed)"></select>
-        <label>Size</label>
-        <select id="origin2-selection" onchange="fill_select('origin2-selection', origin_selections,on_origin_select_changed)">
+        <label>X</label>
+        <select id="x-selection" onchange="fill_select('x-selection', content_selections, on_select_changed)">
         </select>
-        <label>America - Europe - Japan</label>        
-      </div>
-    </div>
-    <div id="time_selects" class="attribute-selection">
-      <div id="selection">
-        <label>GrayScale</label>
-        <select id="time1-selection" onchange="fill_select('time1-selection', time_selections, on_time_select_changed)"></select>
-        <label>Size</label>
-        <select id="time2-selection" onchange="fill_select('time2-selection', time_selections, on_time_select_changed)">
+        <label>Y</label>
+        <select id="y-selection" onchange="fill_select('y-selection', content_selections, on_select_changed)">
         </select>
-        <label>Year 1970-1982</label>
+        <label>Color</label>
+        <select id="color-selection" onchange="fill_select('color-selection', content_selections, on_select_changed)">
+        </select>
+        <label>Form</label>
+        <select id="form-selection" onchange="fill_select('form-selection', content_selections, on_select_changed)">
+        </select>
       </div>
     </div>
   </div>
-  <div id="origin-content">
-    <canvas id="america_canvas" width="30%"></canvas>
-    <div>
-      <img id="america_picture" src="data/AmericaBlackWhite.jpg" onclick="drawOriginTable('American')" style="width:100%">
-    </div>
-    <canvas id="europe_canvas" width="30%"></canvas>
-    <div>
-      <img id="europe_picture" src="data/EuropeBlackWhite.jpg" onclick="drawOriginTable('European')" style="width:100%">
-    </div>
-    <canvas id="japan_canvas" width="30%"></canvas>
-    <div>
-      <img id="japan_picture" src="data/JapanBlackWhite.jpg" onclick="drawOriginTable('Japanese')" style="width:100%">
-    </div>
-  </div>
-  <div id="time-content">
-    <canvas id="time-canvas" width="1000" height="300"></canvas>
+  <div id="data-content">
+    <canvas id="data-canvas" width="1000" height="300"></canvas>
   </div>
   <div class="scroll">
     <br>
@@ -66,8 +45,6 @@
 <script type="text/javascript" src="javascript/car-data.js"></script>
 <script type="text/javascript" src="javascript/utils.js"></script>
 <script type="text/javascript" src="javascript/car-converter.js"></script>
-<script type="text/javascript" src="javascript/origin-content-ui.js"></script>
-<script type="text/javascript" src="javascript/time-content-ui.js"></script>
 <script type="text/javascript" src="javascript/car-data-calculation.js"></script>
 <script type="text/javascript" src="javascript/ui.js"></script>
 
