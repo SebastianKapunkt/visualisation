@@ -2,6 +2,20 @@ let content_selections = [];
 let numberCategories = ["LKM", "Cylinders", "DisplacementInCCM", "Horsepower", "WeightInKG", "Acceleration", "Model Year"];
 let textCategories = ["Car", "Manufacturer", "Origin"];
 
+let what = [{
+    "category": "A",
+    "amount": 28
+},
+{
+    "category": "B",
+    "amount": 55
+},
+{
+    "category": "C",
+    "amount": 43
+},
+];
+
 (function () {
     content_selections.push(document.getElementById('x-selection'));
     content_selections.push(document.getElementById('y-selection'));
@@ -9,6 +23,14 @@ let textCategories = ["Car", "Manufacturer", "Origin"];
     content_selections.push(document.getElementById('form-selection'));
 
     initilize_select(content_selections, on_select_changed);
+
+    drawBarChart(what);
+    what[0].amount=100
+    drawBarChart(what);
+    what[0].amount=150
+    drawBarChart(what);
+    what[0].amount=200
+    drawBarChart(what);
 })();
 
 function initilize_select(selects, callback) {
