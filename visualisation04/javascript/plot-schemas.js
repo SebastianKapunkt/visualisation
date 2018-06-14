@@ -93,6 +93,10 @@ let my_schema = {
       "data": "cars"
     },
     "encode": {
+      "enter": { 
+        "tooltip": {
+          "field": "Car"
+        }},
       "update": {
         "x": {
           "scale": "x",
@@ -121,7 +125,8 @@ let my_schema = {
         "fill": {
           "value": "transparent"
         }
-      }
+      },
+      "hover": { "fill": {"value": "red"} }
     }
   }]
 }
