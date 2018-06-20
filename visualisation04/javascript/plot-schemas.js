@@ -94,9 +94,10 @@ let my_schema = {
     },
     "encode": {
       "enter": { 
-        "tooltip": {
-          "field": "Car"
-        }},
+        "tooltip": [
+          {"field": "Car", "type": "ordinal"},
+        ]
+      },
       "update": {
         "x": {
           "scale": "x",
@@ -111,7 +112,7 @@ let my_schema = {
           "field": "Acceleration"
         },
         "shape": {
-          "value": "square"
+          "value": "circle"
         },
         "strokeWidth": {
           "value": 2

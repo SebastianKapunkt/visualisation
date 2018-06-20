@@ -19,6 +19,12 @@ function drawBarChart(data, keys) {
     my_schema.marks[0].encode.update.x.field = keys[0];
     my_schema.marks[0].encode.update.y.field = keys[1];
     my_schema.marks[0].encode.update.size.field = keys[3];
+
+    tooltips = [
+        {"field": keys[0], "type": "ordinal"},
+    ]
+
+    my_schema.marks[0].encode.enter.tooltip = tooltips;
     render(my_schema);
 
     function render(spec) {
